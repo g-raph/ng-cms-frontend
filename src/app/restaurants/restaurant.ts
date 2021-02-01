@@ -3,6 +3,8 @@ export interface Restaurant {
     description: string;
     image: RestaurantImage[];
     categories: RestaurantCategory[];
+    slug?: string;
+    id: string;
 }
 
 export interface RestaurantCategory {

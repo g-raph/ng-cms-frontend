@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutpageComponent } from './pages/aboutpage/aboutpage.component';
 import { ContactpageComponent } from './pages/contactpage/contactpage.component';
+import { RestaurantDetailComponent } from './restaurants/restaurant-detail/restaurant-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ContactpageComponent } from './pages/contactpage/contactpage.component'
     PageComponent,
     HomepageComponent,
     AboutpageComponent,
-    ContactpageComponent
+    ContactpageComponent,
+    RestaurantDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

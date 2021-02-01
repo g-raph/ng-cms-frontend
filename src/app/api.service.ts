@@ -29,6 +29,11 @@ export class ApiService {
     return this.http.get(url);
   }
 
+  getRestaurant(id: string): Observable<any> {
+    const url = `http://localhost:1337/restaurants/${id}`;
+    return this.http.get(url);
+  }
+
   getHomePage(): Observable<any> {
     const url = `http://localhost:1337/homepage`;
     return this.http.get(url);

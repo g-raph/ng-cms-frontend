@@ -1,1 +1,9 @@
-<p>homepage works!</p>
+<ng-container *ngIf="homepage$ | async as homepage">
+    <div class="page-header">
+        <img [src]="'http://localhost:1337' + homepage.images[0].url">
+    </div>
+    <div class="page-content page-content--fixed">
+        <h1>{{homepage.Title}}</h1>
+        <p>{{homepage.body}}</p>
+    </div>
+</ng-container>

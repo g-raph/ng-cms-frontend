@@ -1,0 +1,9 @@
+<ng-container *ngIf="contactpage$ | async as contactpage">
+    <div class="page-header">
+        <img [src]="'http://localhost:1337' + contactpage.images[0].url">
+    </div>
+    <div class="page-content page-content--fixed">
+        <h1>{{contactpage.title}}</h1>
+        <p>{{contactpage.body}}</p>
+    </div>
+</ng-container>

@@ -19,8 +19,28 @@ export class ApiService {
     return this.http.get(url);
   }
 
+  getPages(): Observable<any> {
+    const url = `http://localhost:1337/pages`;
+    return this.http.get(url);
+  }
+
   getPage(id: string): Observable<any> {
     const url = `http://localhost:1337/pages/${id}`;
+    return this.http.get(url);
+  }
+
+  getHomePage(): Observable<any> {
+    const url = `http://localhost:1337/homepage`;
+    return this.http.get(url);
+  }
+
+  getAboutPage(): Observable<any> {
+    const url = `http://localhost:1337/about-page`;
+    return this.http.get(url);
+  }
+
+  getContactPage(): Observable<any> {
+    const url = `http://localhost:1337/contact-page`;
     return this.http.get(url);
   }
 }

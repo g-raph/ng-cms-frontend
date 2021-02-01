@@ -1,10 +1,19 @@
-<div class="restaurants card-container" *ngIf="restaurants$ | async as restaurants">
-    <div class="card" *ngFor="let item of restaurants">
-        <div class="img">
-            <img [src]="'http://localhost:1337' + item.image[0].url" alt="">
-        </div>
-        <h3>{{item.name}}</h3>
-        <p>{{item.description}}</p>
-        <p><span *ngFor="let cat of item.categories">{{cat.name}}, </span></p>
+<ng-container *ngIf="restaurants$ | async as restaurants">
+  <div class="page-content page-content--fixed">
+    <h1>Restaurants</h1>
+    <div class="restaurants card-container">
+      <mat-card class="card" *ngFor="let item of restaurants">
+        <mat-card-header>
+          <mat-card-title>{{item.name}}</mat-card-title>
+          <mat-card-subtitle><span *ngFor="let cat of item.categories">{{ cat.name }}, </span></mat-card-subtitle>
+        </mat-card-header>
+        <img class="card__image" mat-card-image [src]="'http://localhost:1337' + item.image[0].url">
+        <mat-card-content>
+          <p>
+            {{item.description}}
+          </p>
+        </mat-card-content>
+      </mat-card>
     </div>
-</div>
+  </div>
+</ng-container>

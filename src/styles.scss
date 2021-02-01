@@ -23,3 +23,34 @@ body {
     margin: 0 auto;
   }
 }
+
+//restaurants
+.restaurants {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  .card {
+      max-width: 27.5rem;
+      margin-bottom: 1rem;
+      &__image {
+          height: 15rem;
+          object-fit: cover;
+      }
+  }
+  &-frontpage {
+    margin-top: 2rem;
+    .card {
+      border: 1px solid #cacaca;
+      border-radius: .25rem;
+      max-width: 28%;
+      margin-bottom: 0;
+      padding: 1rem;
+      cursor: pointer;
+      &__image {
+          width: 100%;
+          height: 10rem;
+          object-fit: cover;
+      }
+    }
+  }
+}

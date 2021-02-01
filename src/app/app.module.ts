@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutpageComponent } from './pages/aboutpage/aboutpage.component';
 import { ContactpageComponent } from './pages/contactpage/contactpage.component';
 import { RestaurantDetailComponent } from './restaurants/restaurant-detail/restaurant-detail.component';
+import { CategoryComponent } from './categories/category/category.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RestaurantDetailComponent } from './restaurants/restaurant-detail/resta
     HomepageComponent,
     AboutpageComponent,
     ContactpageComponent,
-    RestaurantDetailComponent
+    RestaurantDetailComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -1,6 +1,9 @@
 <ng-container *ngIf="restaurants$ | async as restaurants">
   <div class="page-content page-content--fixed">
     <h1>Restaurants</h1>
+    <div class="categories-menu">
+      <button mat-button *ngFor="let cat of categories$ | async" [routerLink]="'/categories/' + cat.id">{{cat.name}}</button>
+    </div>
     <div class="restaurants card-container">
       <mat-card class="card" *ngFor="let item of restaurants" [routerLink]="'/restaurants/' + item.id">
         <mat-card-header>

@@ -19,6 +19,11 @@ export class ApiService {
     return this.http.get(url);
   }
 
+  getCategory(id: string): Observable<any> {
+    const url = `http://localhost:1337/categories/${id}`;
+    return this.http.get(url);
+  }
+
   getPages(): Observable<any> {
     const url = `http://localhost:1337/pages`;
     return this.http.get(url);

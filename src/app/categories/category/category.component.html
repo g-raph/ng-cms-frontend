@@ -2,7 +2,11 @@
     <div class="page-content page-content--fixed">
       <h1>{{page.name}}</h1>
       <div class="categories-menu">
-        <button mat-button *ngFor="let cat of categories$ | async" [routerLink]="'/categories/' + cat.id">{{cat.name}}</button>
+        <button mat-button routerLink="/restaurants" routerLinkActive="/restaurants">All</button>
+        <button mat-button *ngFor="let cat of categories$ | async"
+            [routerLink]="'/categories/' + cat.id"
+            [routerLinkActive]="'/categories/' + cat.id"
+        >{{cat.name}}</button>
       </div>
       <div class="restaurants card-container">
         <mat-card class="card" *ngFor="let item of page.restaurants" [routerLink]="'/restaurants/' + item.id">

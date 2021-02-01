@@ -1,5 +1,5 @@
 <ng-container *ngIf="homepage$ | async as homepage">
-    <div class="page-header">
+    <div class="page-header" *ngIf="homepage.images">
         <img [src]="'http://localhost:1337' + homepage.images[0].url">
     </div>
     <div class="page-content page-content--fixed">

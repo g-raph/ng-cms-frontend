@@ -32,7 +32,7 @@ import { ContactpageComponent } from './pages/contactpage/contactpage.component'
     ContactpageComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,

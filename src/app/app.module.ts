@@ -7,6 +7,7 @@ import {
   MatCheckboxModule,
   MatFormFieldModule,
   MatIconModule,
+  MatInputModule,
   MatSidenavModule,
   MatToolbarModule
 } from '@angular/material';
@@ -48,7 +49,8 @@ import { CategoryComponent } from './categories/category/category.component';
     MatFormFieldModule,
     MatIconModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
